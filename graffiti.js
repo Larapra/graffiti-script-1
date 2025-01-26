@@ -1,23 +1,33 @@
 document.addEventListener('DOMContentLoaded', function () {
     console.log('DOMContentLoaded ausgelöst');
+
     var graffitiButton = document.getElementById('graffitiButton');
 
     if (graffitiButton) {
         console.log('Graffiti-Button gefunden');
+        
         graffitiButton.addEventListener('click', function () {
             console.log('Button-Klick erkannt');
 
             // Prüfe, ob ein bestehendes Canvas vorhanden ist
-            var existingCanvas = document.getElementById('graffitiCanvas');
-            if (!existingCanvas) {
-                var canvas = document.createElement('canvas');
+            var canvas = document.getElementById('graffitiCanvas');
+            if (!canvas) {
+                canvas = document.createElement('canvas');
                 canvas.id = 'graffitiCanvas';
                 document.body.appendChild(canvas);
-            } else {
-                var canvas = existingCanvas;
+
+                // Canvas-Styling sicherstellen
+                canvas.style.position = 'fixed';
+                canvas.style.top = '0';
+                canvas.style.left = '0';
+                canvas.style.width = '100%';
+                canvas.style.height = '100%';
+                canvas.style.zIndex = '1000';
+                canvas.style.pointerEvents = 'none';
+                canvas.style.display = 'none'; // Start ausgeblendet
             }
 
-            // Style anpassen
+            // Canvas anzeigen
             canvas.style.display = 'block';
 
             // Canvas konfigurieren
@@ -30,6 +40,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
             console.log('Canvas hinzugefügt und gezeichnet');
 
+            // Nach 3 Sekunden ausblenden
             setTimeout(function () {
                 console.log('Canvas ausgeblendet');
                 canvas.style.display = 'none';
