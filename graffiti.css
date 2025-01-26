@@ -1,9 +1,10 @@
 #graffitiCanvas {
-    position: absolute;
+    position: fixed; /* Fixed statt absolute für viewport-feste Positionierung */
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    pointer-events: none;
-    display: none; /* Wird durch JS auf 'block' gesetzt */
+    z-index: 1000; /* Sicherstellen, dass das Canvas über anderen Inhalten liegt */
+    pointer-events: none; /* Keine Interaktionen blockieren */
+    display: none; /* Standardmäßig ausgeblendet, wird durch JS auf 'block' gesetzt */
 }
