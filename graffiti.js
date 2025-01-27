@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 canvas.style.height = '100%';
                 canvas.style.zIndex = '1000';
                 canvas.style.pointerEvents = 'none';
-                canvas.style.display = 'none';  Start ausgeblendet
+                canvas.style.display = 'none';   Start ausgeblendet
             }
 
              Canvas anzeigen
@@ -39,8 +39,8 @@ document.addEventListener('DOMContentLoaded', function () {
             var colors = ['#FF5733', '#33FF57', '#3357FF', '#F333FF', '#FFD700', '#00FFFF'];
 
              Schriftgröße an die Fensterbreite anpassen
-            var fontSize = Math.min(canvas.width, canvas.height)  8;
-            ctx.font = fontSize + 'px PredikatOneday, Arial';  Deine Graffiti-Schrift
+            var fontSize = Math.min(canvas.width, canvas.height)  0.08;  Multiplikation mit 0.08
+            ctx.font = fontSize + 'px PredikatOneday, Arial';   Deine Graffiti-Schrift
             ctx.textAlign = 'center';
             ctx.textBaseline = 'middle';
 
@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', function () {
             var y = canvas.height  2;
 
              Zeichne jeden Buchstaben einzeln in einer zufälligen Farbe
-            var offsetX = -((text.length - 1)  fontSize)  4;  Zentriert die Buchstaben
+            var offsetX = -((text.length - 1)  fontSize)  4;   Zentriert die Buchstaben
             for (var i = 0; i  text.length; i++) {
                 ctx.fillStyle = colors[i % colors.length];
                 ctx.fillText(text[i], x + offsetX + i  fontSize  0.8, y);
