@@ -1,10 +1,10 @@
 @font-face {
     font-family: 'PredikatOneday';
-    src: url('https://raw.githubusercontent.com/Larapra/graffiti-script-1/refs/heads/main/Predikat%20Oneday.ttf') format('truetype');
+    src: url('https://cdn.jsdelivr.net/gh/Larapra/graffiti-script-1@main/Predikat%20Oneday.ttf') format('truetype');
 }
 
 body {
-    font-family: 'PredikatOneday', Arial, sans-serif; /* Standard-Font für das Projekt */
+    font-family: 'PredikatOneday', Arial, sans-serif;
 }
 
 #graffitiCanvas {
@@ -15,5 +15,5 @@ body {
     height: 100%;
     z-index: 1000;
     pointer-events: none;
-    display: none; /* Standardmäßig versteckt, wird durch JS aktiviert */
+    display: none;
 }
