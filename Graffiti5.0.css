@@ -1,4 +1,4 @@
-/* Canvas-Styles */ 
+/* Canvas-Styles */
 #graffitiCanvas {
     position: fixed;
     top: 0;
@@ -13,7 +13,7 @@
 /* Button-Stil */
 #graffitiButton {
     position: fixed;
-    top: 80px;  /* Button nach unten verschieben */
+    top: 150px;  /* Setzt den Button noch weiter nach unten */
     left: 10px;
     background-color: #333;
     color: white;
