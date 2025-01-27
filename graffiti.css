@@ -1,12 +1,20 @@
+/* Schriftart einbinden */
 @font-face {
-    font-family: 'PredikatOneday';
-    src: url('https://cdn.jsdelivr.net/gh/Larapra/graffiti-script-1@main/Predikat%20Oneday.ttf') format('truetype');
+    font-family: 'BlackDestroyPersonal';
+    src: url('path/to/BlackDestroyPersonal.woff2') format('woff2'),
+         url('path/to/BlackDestroyPersonal.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 }
 
+/* Standard-Schriftart für den Body */
 body {
-    font-family: 'PredikatOneday', Arial, sans-serif;
+    font-family: 'BlackDestroyPersonal', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
+/* Canvas-Stile */
 #graffitiCanvas {
     position: fixed;
     top: 0;
@@ -15,5 +23,21 @@ body {
     height: 100%;
     z-index: 1000;
     pointer-events: none;
-    display: none;
+    display: none;  /* Canvas ist anfangs unsichtbar */
+}
+
+/* Button-Stil */
+#graffitiButton {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+#graffitiButton:hover {
+    background-color: #555;
 }
