@@ -1,0 +1,28 @@
+/* Canvas-Styles */
+#graffitiCanvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    pointer-events: none;
+    display: none;  /* Canvas ist anfangs unsichtbar */
+}
+
+/* Button-Stil */
+#graffitiButton {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#graffitiButton:hover {
+    background-color: #555;
+}
