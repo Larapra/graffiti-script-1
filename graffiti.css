@@ -1,8 +1,8 @@
 /* Schriftart einbinden */
 @font-face {
     font-family: 'BlackDestroyPersonal';
-    src: url('path/to/BlackDestroyPersonal.woff2') format('woff2'),
-         url('path/to/BlackDestroyPersonal.woff') format('woff');
+    src: url('https://cdn.jsdelivr.net/gh/Larapra/graffiti-script-1@refs/heads/main/blackdestroypersonal-ax48m-webfont.woff2') format('woff2'),
+         url('https://cdn.jsdelivr.net/gh/Larapra/graffiti-script-1@refs/heads/main/blackdestroypersonal-ax48m-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
