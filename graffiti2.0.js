@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function () {
             canvas.style.width = '100%';
             canvas.style.height = '100%';
             canvas.style.zIndex = '1000';
-            canvas.style.pointerEvents = 'none';
+            canvas.style.pointerEvents = 'none'; // Canvas darf keine Klicks blockieren
             canvas.style.display = 'none'; // Start ausgeblendet
 
             // Canvas anzeigen
@@ -40,6 +40,7 @@ document.addEventListener('DOMContentLoaded', function () {
             image.src = 'https://cdn.jsdelivr.net/gh/Larapra/graffiti-script-1@main/IMG_0165-removebg-preview.png';  // Dein Bild-Link
 
             image.onload = function () {
+                console.log('Bild erfolgreich geladen');
                 // Sobald das Bild geladen ist, zeichne es auf das Canvas
                 var x = canvas.width / 2 - image.width / 2;  // Positioniere das Bild horizontal in der Mitte
                 var y = canvas.height / 2 - image.height / 2;  // Positioniere das Bild vertikal in der Mitte
@@ -50,6 +51,17 @@ document.addEventListener('DOMContentLoaded', function () {
                 console.log('Bild gezeichnet');
             };
 
+            image.onerror = function () {
+                console.error('Fehler beim Laden des Bildes');
+            };
+
             // Nach 3 Sekunden ausblenden
             setTimeout(function () {
-                console.log(
+                console.log('Canvas nach 3 Sekunden ausgeblendet');
+                canvas.style.display = 'none'; // Canvas ausblenden
+            }, 3000);
+        });
+    } else {
+        console.log('Graffiti-Button nicht gefunden!');
+    }
+});
